@@ -1,1 +1,25 @@
 
+protected void SbmtChangeJG_Click(object sender, EventArgs e)
+        {
+            string num = null;
+            string num2 = null;
+            string str1 = JGHid.Value;
+            for (var j = str1.Length - 1; j >= 0; j--)
+            {
+                if (str1[j] != ',')
+                {
+                    num = num + str1[j];
+                }
+                else
+                {
+                    for (int i = num.Length - 1; i >= 0; i--)
+                    {
+                        num2 = num2 + num[i];
+                    }
+                    // Here You write The code that make changes on id, (num2) is the id choosed by picker.
+                    num = "";
+                    num2 = "";
+                }
+            }
+
+        }
